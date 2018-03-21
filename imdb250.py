@@ -27,7 +27,7 @@ def get_one_page(url):
 
 #提取需要的信息并做成字典的形式
 def parse_one_page(html):
-    pattern = re.compile('chttp_tt_(.*?)>.*?href.*?title.*?>(.*?)</a>.*?>\((.*?)\)</span>.*?imdbRating.*?ratings\S\S(.*?)</strong>.*?"watchlistColumn">', re.S)
+    pattern = re.compile('chttp_tt_(.*?)\S>.*?href.*?title.*?>(.*?)</a>.*?>\((.*?)\)</span>.*?imdbRating.*?ratings\S\S(.*?)</strong>.*?"watchlistColumn">', re.S)
     items = re.findall(pattern, html)
     for item in items:
         yield {
