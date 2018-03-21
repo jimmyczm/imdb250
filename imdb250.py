@@ -8,7 +8,7 @@ import re
 import io  
 import sys
 
-
+# 这个是为了解决windows下打印错误的问题
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') 
 
 #获取页面信息
