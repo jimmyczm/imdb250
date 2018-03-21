@@ -25,7 +25,7 @@ def get_one_page(url):
     except RequestException:
         return None
 
-#提取需要的信息并做成字典的形式
+#提取需要的信息并做成字典的形式a
 def parse_one_page(html):
     pattern = re.compile('chttp_tt_(.*?)\S>.*?href.*?title.*?>(.*?)</a>.*?>\((.*?)\)</span>.*?imdbRating.*?ratings\S\S(.*?)</strong>.*?"watchlistColumn">', re.S)
     items = re.findall(pattern, html)
