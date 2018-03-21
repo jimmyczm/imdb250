@@ -7,6 +7,7 @@ from requests.exceptions import RequestException
 import re
 import io  
 import sys
+import json
 
 # 这个是为了解决windows下打印错误的问题
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') 
